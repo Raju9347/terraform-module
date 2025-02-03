@@ -1,0 +1,11 @@
+resource "aws_instance" "my_instance" {
+  ami           = ami-0dcc1e21636832c5d
+  instance_type = t2.micro
+  subnet_id     = subnet-07ebbe60
+  vpc_security_group_ids = sg-123xyz
+  tags = {
+    Name = "Dev-Instance"
+    Owner = "@.com"
+    DC = "Bangalore"
+  }
+}
